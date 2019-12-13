@@ -18,7 +18,8 @@ int main () {
     {
     	
     	n=line.length();
-    	if (line[0] == '>')
+	
+    	if (line[0] == '>')			//Check if it is name
     	{
     		 sequence_name = line.substr(1, n-1);
     		 cout<<sequence_name<<endl;
