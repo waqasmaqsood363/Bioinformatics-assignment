@@ -1,0 +1,4 @@
+>sequence1
+ACTGAGA
+>sequence2
+ACTGAGTC
