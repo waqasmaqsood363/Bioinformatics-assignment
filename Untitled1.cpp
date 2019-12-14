@@ -5,13 +5,16 @@
 using namespace std;
 //Waqas Maqsood
 //2016531
-
-int main () {
+//Part 1:
+int main () 
+{
   string line;
   int n;
   string subseq;
   string sequence_name;
-  int k = 5;
+  int k;
+  cout<<"Enter the size of K-mer:"<<endl;
+  cin>>k;
   ifstream myfile ("seq2.txt");
   if (myfile.is_open())
   {
@@ -32,12 +35,12 @@ int main () {
 	    	subseq = line.substr(i, k);
 	    	
 	    	std::ofstream myfilein;
-	    	myfilein.open("test.txt", std::ios_base::app);
+	    	myfilein.open("Database.txt", std::ios_base::app);
 	    	
 	
 	  		if (myfilein.is_open())
 	  		{
-	    	myfilein <<sequence_name<<": "<<subseq<<endl;
+	    	myfilein <<sequence_name<<":\t"<<subseq<<endl;
 	  		}
 	  		else cout << "Unable to open file";
 	  
@@ -53,4 +56,4 @@ int main () {
   else cout << "Unable to open file"; 
 
   return 0;
-}}
+}
