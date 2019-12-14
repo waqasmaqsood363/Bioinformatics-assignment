@@ -3,6 +3,8 @@
 #include <string>
 #include <cstring>
 using namespace std;
+//Waqas Maqsood
+//2016531
 
 int main () {
   string line;
@@ -10,7 +12,6 @@ int main () {
   string subseq;
   string sequence_name;
   int k = 5;
-  //std::ofstream outfile;
   ifstream myfile ("seq2.txt");
   if (myfile.is_open())
   {
@@ -18,8 +19,7 @@ int main () {
     {
     	
     	n=line.length();
-	
-    	if (line[0] == '>')			//Check if it is name
+    	if (line[0] == '>')
     	{
     		 sequence_name = line.substr(1, n-1);
     		 cout<<sequence_name<<endl;
@@ -34,11 +34,10 @@ int main () {
 	    	std::ofstream myfilein;
 	    	myfilein.open("test.txt", std::ios_base::app);
 	    	
-	    	//ofstream myfilein ("example.txt");
+	
 	  		if (myfilein.is_open())
 	  		{
 	    	myfilein <<sequence_name<<": "<<subseq<<endl;
-	    	//myfile.close();
 	  		}
 	  		else cout << "Unable to open file";
 	  
@@ -54,4 +53,4 @@ int main () {
   else cout << "Unable to open file"; 
 
   return 0;
-}
+}}
